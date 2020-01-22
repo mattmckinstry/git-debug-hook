@@ -1,5 +1,5 @@
 #!/bin/bash
-# Based on code by Remigijus Jarmalavičius
+# Based on code by Nikolaos Dimopoulos nikos@niden.net
 # Checks the files to be committed for the presence of debugger;, Debugger.Launch();
 # The array below can be extended for further checks
 
