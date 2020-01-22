@@ -1,4 +1,9 @@
-# What does this do?
+# Git Pre-Commit check for certain words
+
+Author:	Matt McKinstry
+Thanks to:	Nikolaos Dimopoulos <nikos@niden.net>
+
+# About
 
 This is a pre-commit hook you put in your git repo.
 
@@ -46,7 +51,4 @@ Fork the project and open a pull request. Be sure to also add your language to
 the [supported language list](#supported-languages) or I'll contact the
 authorities. GOOD DAY, SIR/MADAM/NON-GENDER-CONFORMING-FORMAL-TITLE.
 
-# License
-
-MIT. Yay.
 
