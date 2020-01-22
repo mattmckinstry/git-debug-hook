@@ -1,7 +1,7 @@
 # Git Pre-Commit check for certain words
 
-| Author:	| Matt McKinstry |
-| Thanks to: | Nikolaos Dimopoulos <nikos@niden.net> |
+Author:	| Matt McKinstry
+Thanks to: | Nikolaos Dimopoulos <nikos@niden.net>
 
 # About
 
