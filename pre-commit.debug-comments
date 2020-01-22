@@ -1,36 +1,28 @@
 #!/bin/bash
 
-DEBUG=""
-function add_to_debug {
+DEBUGGERLAUNCH=""
+function add_to_debugger_launch {
 	filetype=$1
-	comment=$2
+	statement=$2
 
 	next=$(
 		git diff \
 			--cached \
 			--name-only \
-			-G"${comment}[ ]*DEBUG" \
+			-G"${statement}[ ]*DEBUGGERLAUNCH" \
 			-- "*.${filetype}"
 	)
-	DEBUG="${DEBUG}${next}"
+	DEBUGGERLAUNCH="${DEBUGGERLAUNCH}${next}"
 }
 
-add_to_debug 'js' '//'
-add_to_debug 'rs' '//'
-add_to_debug 'html' '<!--'
-add_to_debug 'lisp' ';'
-add_to_debug 'sh' '#'
-add_to_debug 'yaml' '#'
-add_to_debug 'hbs' '\{\{!--'
-add_to_debug 'java' '//'
-add_to_debug 'php' '//'
-add_to_debug 'css' '/*'
+add_to_debugger_launch 'js' 'debugger;'
+add_to_debugger_launch 'cs' 'Debugger.Launch();'
 
-if [ "${DEBUG}" != "" ]; then
+if [ "${DEBUGGERLAUNCH}" != "" ]; then
 	echo
-	echo "Please address the DEBUG comments in following files before committing:"
+	echo "Please address the Debugger Launch code in following files before committing:"
 	echo
-	echo "${DEBUG}" | sed 's/^/  /'
+	echo "${DEBUGGERLAUNCH}" | sed 's/^/  /'
 	exit 1
 fi
 
