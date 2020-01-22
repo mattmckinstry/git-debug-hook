@@ -15,7 +15,7 @@ System.Diagnostics.Debugger.Launch();
 When you try to commit this file, it bitches at you, saying:
 
 ```
-Please address the Debugger Launch code in following files before committing:
+These errors were found in try-to-commit files:
 
   user.js
 ```
@@ -25,16 +25,14 @@ great reminder to not commit your debug code.
 
 # Usage
 
-Simply put the file `pre-commit.debugger-launch` into `.git/hooks/pre-commit`.
-You can also host this repo somewhere else and symlink `.git/hooks/pre-commit`
-to `git-debug-hook/pre-commit.debugger-launch`.
+Simply copy the file `pre-commit.debugger-launch` into the file `.git/hooks/pre-commit`.  You may need to run `chmod +x .git/hooks/pre-commit;` from Bash
 
 That's it!
 
 # Supported languages
 
-The hook detects language by file extension (ie, .js -> javascript, .lisp ->
-lisp, etc).
+The hook detects language by file extension (ie, .js -> javascript, .cs ->
+C#, etc).
 
 - javascript
 - C#
