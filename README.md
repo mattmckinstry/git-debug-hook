@@ -25,7 +25,7 @@ great reminder to not commit your debug code.
 
 # Usage
 
-Simply copy the file `pre-commit.debugger-launch` into the file `.git/hooks/pre-commit`.  You may need to run `chmod +x .git/hooks/pre-commit;` from Bash
+Simply copy the file `pre-commit` into the directory `.git/hooks`.  You may need to run `chmod +x .git/hooks/pre-commit;` from Bash
 
 That's it!
 
